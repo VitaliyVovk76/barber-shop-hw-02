@@ -1,0 +1,77 @@
+:root {
+  --text-primary-color: #555555;
+
+  --title-primary-color: #303030;
+  --title-sacondary-color: #ffffff;
+
+  --link-header-color: #ffffff;
+
+  --button-primary-color: #ffffff;
+  --button-sacondary-color: #303030;
+
+  --accent-color: #ff6c00;
+
+  --background-primary-color: #ffffff;
+  --background-sacondary-color: #f7f7f7;
+
+  --address-color: #9da4bd;
+  --form-text-color: rgba(157, 164, 189, 0.4);
+}
+
+/* 
+title: Raleway, 700;
+text: Open Sans, 600, 400
+*/
+body {
+  color: var(--text-primary-color);
+  background-color: var(--background-primary-color);
+
+  font-family: "Open Sans", sans-serif;
+}
+
+address {
+  font-style: normal;
+}
+
+/* сбрасывает базовые стили списка */
+.list {
+  list-style: none;
+}
+
+.button {
+  border: 1px solid #ff6c00;
+  box-sizing: border-box;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.soc-link {
+  
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  /* identical to box height */
+
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+/* HEADER */
+.site-nav-link,
+.site-nav-tel {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  /* color: var(--link-header-color); */
+  color: green;
+}
