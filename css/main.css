@@ -1,21 +1,26 @@
 :root {
-  --text-primary-color: #555555;
-
   --title-primary-color: #303030;
   --title-sacondary-color: #ffffff;
 
+  --text-primary-color: #555555;
+  --text-sacondary-color: #9da4bd;
+  --text-big-pr-color: rgba(157, 164, 189, 0.6);
+  --text-hero-sc-color: #9da4bd;
+
   --link-header-color: #ffffff;
+  --soclink-text-color: #303030;
 
   --button-primary-color: #ffffff;
   --button-sacondary-color: #303030;
 
-  --accent-color: #ff6c00;
-
   --background-primary-color: #ffffff;
   --background-sacondary-color: #f7f7f7;
 
-  --address-color: #9da4bd;
+  --address-text-color: #9da4bd;
+
   --form-text-color: rgba(157, 164, 189, 0.4);
+
+  --accent-color: #ff6c00;
 }
 
 /* 
@@ -25,7 +30,7 @@ text: Open Sans, 600, 400
 body {
   color: var(--text-primary-color);
   background-color: var(--background-primary-color);
-
+  letter-spacing: 0.02em;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -33,13 +38,21 @@ address {
   font-style: normal;
 }
 
+a {
+  cursor: pointer;
+}
+
 /* сбрасывает базовые стили списка */
 .list {
   list-style: none;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .button {
-  border: 1px solid #ff6c00;
+  border: 1px solid var(--accent-color);
   box-sizing: border-box;
   border-radius: 25px;
 
@@ -49,18 +62,37 @@ address {
   text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  background-color: transparent;
+}
+
+.button.primary {
+  /* color: var(--button-primary-color); */
+  color: green;
+}
+
+.button.sacondary {
+  color: var(--button-sacondary-color);
+}
+
+.button.primary:hover,
+.button.primary:focus,
+.button.sacondary:hover,
+.button.sacondary:focus {
+  color: var(--accent-color);
 }
 
 .soc-link {
-  
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   /* identical to box height */
 
-  letter-spacing: 0.2em;
+  color: var(--soclink-text-color);
+}
 
-  color: #303030;
+.soc-link:hover,
+.soc-link:focus {
+  color: var(--accent-color);
 }
 
 /* HEADER */
@@ -74,4 +106,108 @@ address {
 
   /* color: var(--link-header-color); */
   color: green;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav-tel:hover,
+.site-nav-tel:focus {
+  color: var(--accent-color);
+}
+
+/* HERO */
+
+.section-text-one {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.section-text-one.primary {
+  color: var(--text-big-pr-color);
+}
+.section-text-one.sacondary{
+    /* color: var(--title-sacondary-color); */
+    color: green;
+}
+
+.hero-title {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  /* color: var(--title-sacondary-color); */
+  color: green;
+}
+
+.section-text-two {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.section-text-two.primary {
+  color: var(--text-hero-sc-color);
+}
+
+/* ABOUT US */
+
+.section-title {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: var(--title-primary-color);
+}
+
+.section-text-three {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+}
+
+/* HOW MUCH */
+.section-title.sacondary {
+  color: green;
+}
+
+/* advantages */
+.digital-text {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 57px;
+  letter-spacing: 0.05em;
+  color: var(--title-primary-color);
+}
+
+.section-text-four {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: var(--title-primary-color);
+}
+
+/* OUR MASTERS */
+.text-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  color: var(--title-primary-color);
+}
+
+.text-specialty {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--accent-color);
 }
